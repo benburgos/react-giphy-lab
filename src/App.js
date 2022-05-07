@@ -1,13 +1,15 @@
 import './App.css';
+import Button from './components/Button';
+import Heading from './components/Heading';
+import Gif from './components/Gif';
 
 function App() {
   return (
     <div className="App">
       <h1>Giphy Generator</h1>
-      <button>Show me a Gif</button>
-      <h3>Use Giphy API to generate a random gif!</h3>
-      <img src="https://picsum.photos/400" alt="random" />
-      <h4>Powered by GIPHY</h4>
+      <Button />
+      <Heading />
+      <Gif />
     </div>
   );
 }
