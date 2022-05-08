@@ -1,7 +1,9 @@
-const Button = () => {
+import { useState } from 'react';
+
+const Button = (props) => {
   return (
     <>
-      <button>Show me a GIF</button>
+      <input type="submit" value="Show me a GIF" />
     </>
   );
 };
