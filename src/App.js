@@ -1,12 +1,10 @@
 import './App.css';
 import Button from './components/Button';
-import Heading from './components/Heading';
 import Gif from './components/Gif';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 function App() {
   const API_KEY = process.env.REACT_APP_API_KEY;
-  const randomGif = `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}`;
   const [gif, setGif] = useState(null);
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -19,10 +17,11 @@ function App() {
   return (
     <div className="App">
       <h1>Giphy Generator</h1>
+      <h3>Use Giphy API to generate a random gif!</h3>
       <form onSubmit={handleSubmit}>
-        <input type="submit" value="Show me a GIF" />
+        <Button value="Generate a GIF" />
       </form>
-      <Gif gif={gif}/>
+      <Gif gif={gif} />
     </div>
   );
 }
